@@ -1,12 +1,18 @@
 {
-  "extends": "./tsconfig",
-  "exclude": ["example"],
+  "extends": "./tsconfig.json",
+  "exclude": ["example", "**/__tests__", "**/__mocks__"],
   "compilerOptions": {
     "target": "es2015",
     "module": "commonjs",
     "outDir": "./lib",
+    "rootDir": "./src",
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true
-  }
+    "sourceMap": true,
+    "noEmit": false,
+    "verbatimModuleSyntax": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*"]
 }
