@@ -24,7 +24,7 @@ const tscPath = join(__dirname, '..', 'node_modules', '.bin', tscBin);
 
 if (!existsSync(tscPath)) {
   console.error('TypeScript compiler not found in node_modules/.bin');
-  console.error('Please run: yarn install');
+  console.error('Please run: npm install');
   process.exit(1);
 }
 

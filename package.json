@@ -36,12 +36,12 @@
   ],
   "scripts": {
     "build": "node ./scripts/build.js",
-    "example": "yarn workspace react-native-unity-example",
+    "example": "npm run --workspace=example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
-    "prepare": "yarn build",
+    "prepare": "npm run build",
     "release": "release-it"
   },
   "keywords": [
@@ -100,7 +100,6 @@
   "workspaces": [
     "example"
   ],
-  "packageManager": "yarn@3.6.1",
   "engines": {
     "node": ">= 18.0.0"
   },

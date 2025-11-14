@@ -41,11 +41,14 @@ Pod::Spec.new do |s|
    end
   end
 
-  # Copy the framework to the plugin folder so that xcode can install it
+  # Copy only the framework to the plugin folder so that xcode can install it
   # The framework should be placed in the <YOUR_PROJECT>/unity/builds/ios folder.
   s.prepare_command =
   <<-CMD
-    cp -R ../../../unity/builds/ios/ ios/
+    mkdir -p ios/
+    if [ -d "../../../unity/builds/ios/UnityFramework.framework" ]; then
+      cp -R ../../../unity/builds/ios/UnityFramework.framework ios/
+    fi
   CMD
 
   s.vendored_frameworks = ["ios/UnityFramework.framework"]
