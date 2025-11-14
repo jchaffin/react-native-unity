@@ -41,7 +41,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
-    "prepare": "bob build",
+    "prepare": "yarn build",
     "release": "release-it"
   },
   "keywords": [
@@ -85,7 +85,6 @@
     "prettier": "^2.0.5",
     "react": "18.2.0",
     "react-native": "0.72.7",
-    "react-native-builder-bob": "^0.20.0",
     "release-it": "^15.0.0",
     "ts-node": "^10.9.2",
     "turbo": "^1.10.7",
@@ -164,20 +163,6 @@
     "tabWidth": 2,
     "trailingComma": "es5",
     "useTabs": false
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
-    ]
   },
   "codegenConfig": {
     "name": "unityview",
