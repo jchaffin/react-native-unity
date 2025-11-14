@@ -9,7 +9,7 @@ interface IMessage {
 }
 
 const Unity = () => {
-  const unityRef = useRef()
+  const unityRef = useRef<UnityView>(null)
   const message: IMessage = {
     gameObject: '[Scripts]',
     methodName: 'InitModule',

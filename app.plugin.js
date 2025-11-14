@@ -71,4 +71,3 @@ const withStringsXMLMod = (config) =>
   });
 
 module.exports = withUnity;
-  
