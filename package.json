@@ -12,7 +12,8 @@
       "types": "./lib/index.d.ts",
       "react-native": "./lib/index.js",
       "default": "./lib/index.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "src",
