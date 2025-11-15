@@ -48,6 +48,10 @@ Pod::Spec.new do |s|
     mkdir -p ios/
     if [ -d "../../../unity/builds/ios/UnityFramework.framework" ]; then
       cp -R ../../../unity/builds/ios/UnityFramework.framework ios/
+      # Copy NativeCallProxy.h to framework headers if it exists and isn't already there
+      if [ -f "../../../unity/builds/ios/Libraries/Plugins/iOS/NativeCallProxy.h" ] && [ ! -f "ios/UnityFramework.framework/Headers/NativeCallProxy.h" ]; then
+        cp ../../../unity/builds/ios/Libraries/Plugins/iOS/NativeCallProxy.h ios/UnityFramework.framework/Headers/
+      fi
     fi
   CMD
 
