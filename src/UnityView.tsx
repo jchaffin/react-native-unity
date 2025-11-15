@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NativeUnityView, { Commands } from './specs/UnityViewNativeComponent';
+import NativeUnityView, { Commands } from './UnityViewNativeComponent';
 import type { DirectEventHandler } from 'react-native/Libraries/Types/CodegenTypes';
 import type { ViewProps } from 'react-native';
 import { Platform } from 'react-native';
