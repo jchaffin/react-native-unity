@@ -166,6 +166,6 @@
   "codegenConfig": {
     "name": "unityview",
     "type": "components",
-    "jsSrcsDir": "./src/specs"
+    "jsSrcsDir": "src"
   }
 }
